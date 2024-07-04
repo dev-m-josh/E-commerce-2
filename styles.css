@@ -1,0 +1,274 @@
+
+*{
+    padding: 0;
+    font-family: cursive;
+    margin: 0;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-size: 20px;
+    color: #222;
+}
+
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+body{
+    width: 100%;
+}
+
+/*Header Start*/
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #E4E6F4;
+    box-shadow: 0 5px 15px lightblue;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#header img{
+    border-radius: 50%;
+    height: 50px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 50%;
+    height: 100%;
+}
+
+#navbar li{
+    list-style: none;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: royalblue;
+    transition: ease-in-out .3s;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -2px;
+    left: 4px;
+}
+
+#navbar img{
+    border-radius: 50%;
+    height: 30px;
+}
+
+/*Home Page*/
+#hero{
+    background-image: url("https://previews.123rf.com/images/primagefactory/primagefactory1705/primagefactory170500804/78541045-attractive-asian-woman-using-credit-card-paying-shopping-standing-on-white-background-e-commerce.jpg");
+    height: 60vh;
+    width: 100%;
+    background-position: top 2% right 0;
+    block-size: cover;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4{
+    padding-bottom: 15px;
+}
+
+#hero h1{
+    color: #088178;
+}
+
+#hero button{
+    background-image: url("https://i.etsystatic.com/30972341/r/il/3a3025/5464646381/il_570xN.5464646381_s3y4.jpg");
+    border-radius: 5px;
+    border: 0;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #088178;
+    font-weight: 600;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
