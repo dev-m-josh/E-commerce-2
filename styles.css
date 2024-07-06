@@ -33,26 +33,33 @@ p{
     margin: 15px 0 20px 0;
 }
 
-.section-p1{
-    padding: 40px 80px;
-}
+
 
 .section-m1{
     margin: 40px 0;
 }
 
 body{
-    max-width: 1240px;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.container{
+    max-width: 1240px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
 /*Header Start*/
 #header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 80px;
+   
     background-color: #E4E6F4;
     box-shadow: 0 5px 15px lightblue;
     height: 50px;
@@ -201,8 +208,15 @@ body{
     color: grey;
 }
 
-#product1{
+#product1, #product2{
     text-align: center;
+    width: 100%;
+}
+
+.pro-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .pro:hover{
@@ -309,22 +323,103 @@ body{
     border: none;
 }
 
+#small-banner{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.banner-box{
+    background-image: url("https://as1.ftcdn.net/v2/jpg/02/72/30/46/1000_F_272304691_zPQT4N6Ni624qNyQKYOmlvKh3KNnjtwZ.jpg");
+    min-width: 580px;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+   padding-left: 30px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+
+.second{
+    background-image: url("https://img.freepik.com/free-photo/row-fashionable-clothing-hangers_1232-3003.jpg");
+}
+
+.banner-box h4{
+   color: white;
+   font-size: 20px;
+   font-weight: 300; 
+}
+
+.banner-box h2{
+    color: #088178;
+    font-size: 28px;
+    font-weight: 800; 
+ }
+
+ .banner-box span{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 15px; 
+ }
+
+ .banner-box button{
+    padding: 10px;
+    font-size: 13px;
+    border-color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    color: white;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: ease-in-out .3s;
+ }
+
+ .banner-box:hover button{
+    background-color: #088178;
+    border-color: #088178;
+ }
+
+ #banner3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ }
 
 
+ .banner-box-three{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1v8lREBPaXHoBNGEOZ3usqWcbdxwOMTTyGtQ1jFjqnuDoVvzeGquTx60JnWP-tYdV7Fw&usqp=CAU");
+    min-width: 30%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+   padding-left: 20px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
 
+.banner-box-three h2{
+    color: #fff;
+    font-weight: 900;
+    font-size: 24px
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.banner-box-three h3{
+    color: #ec544e;
+    font-weight: 800;
+    font-size: 15px
+}
 
 
 
