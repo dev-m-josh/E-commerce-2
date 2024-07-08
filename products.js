@@ -252,7 +252,7 @@ function creatproduct (product){
   //A product div
   let productEle = document.createElement("div");
   productEle.classList.add("pro");
-  productEle.setAttribute("id", products.id);
+  productEle.setAttribute("id", product.id);
 
   //Children elements
   //image
@@ -323,7 +323,7 @@ descriptionClassEle.append(cartClassEle, categoryclassEle, headingEle, buttonEle
 
 
   //Apending to the div
-  productEle.append(imageEle, descriptionClassEle, cartClassEle, categoryclassEle, headingEle,buttonEle);
+  productEle.append(imageEle, descriptionClassEle);
 
   return productEle
 
@@ -356,6 +356,7 @@ productcontainerEle.append(...productEleli)
   for (let x = 0; x<productEle.length; x++){
     productEle[x].addEventListener("click", function(e){
       populatePopup(e.currentTarget.id)
+     
     })
   }
   
