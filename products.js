@@ -244,6 +244,99 @@ const products = [
 
 
 
+var productcontainerEle = document.getElementById("pro-container");
+
+let productEleli = [];
+
+function creatproduct (product){
+  //A product div
+  let productEle = document.createElement("div");
+  productEle.classList.add("pro");
+  productEle.setAttribute("id", products.id);
+
+  //Children elements
+  //image
+  let imageEle = document.createElement("img");
+  imageEle.setAttribute("src", product.image);
+
+  //description class
+  let descriptionClassEle =document.createElement("div");
+  descriptionClassEle.classList.add("description");
+
+    //cart class
+    let cartClassEle = document.createElement("div");
+    cartClassEle.classList.add("cart");
+
+      //h4 price
+  let priceTagEle = document.createElement("h4");
+  priceTagEle.innerText=("$" + product.price);
+
+
+
+    //yello class
+    let yelloClassEle = document.createElement("div");
+    yelloClassEle.classList.add("yello");
+
+    //The stars
+    let starsRate1 = document.createElement("span");
+    starsRate1.innerHTML=('<i class="fa-solid fa-star"></i>');
+  
+    let starsRate2 = document.createElement("span");
+    starsRate2.innerHTML=('<i class="fa-solid fa-star"></i>');
+  
+    let starsRate3 = document.createElement("span");
+    starsRate3.innerHTML=('<i class="fa-solid fa-star"></i>');
+  
+    let starsRate4 = document.createElement("span");
+    starsRate4.innerHTML=('<i class="fa-solid fa-star"></i>');
+  
+    let starsRate5 = document.createElement("span");
+    starsRate5.innerHTML=('<i class="fa-solid fa-star"></i>');
+
+
+
+
+
+  //span category class
+  let categoryclassEle =document.createElement("span")
+  categoryclassEle.classList.add("category");
+  categoryclassEle.innerText=(product.category);
+
+  //h5 in category class
+  let headingEle = document.createElement("h5");
+  headingEle.innerText=(product.title);
+
+//A button
+let buttonEle =document.createElement("button");
+buttonEle.innerText= ("Add TO Cart");
+
+//appending childElements to yelloClass
+yelloClassEle.append(starsRate1, starsRate2, starsRate3, starsRate4, starsRate5);
+
+//appending childElements to cartclass
+cartClassEle.append(priceTagEle, yelloClassEle);
+
+//appending childElements to descriptionClassEle
+descriptionClassEle.append(cartClassEle, categoryclassEle, headingEle, buttonEle)
+
+
+
+
+  //Apending to the div
+  productEle.append(imageEle, descriptionClassEle, cartClassEle, categoryclassEle, headingEle,buttonEle);
+
+  return productEle
+
+}
+
+for (var x = 0; x<products.length; x++){
+  productEleli.push(creatproduct(products[x]));
+
+}
+
+
+//append the created products html elements to the DOM
+productcontainerEle.append(...productEleli)
 
 
 
@@ -251,8 +344,47 @@ const products = [
 
 
 
-
-
+  //Display product details functionality when clicked
+  let productPopUp = document.getElementById("popup");
+  
+  let preventClick = document.getElementById("prevent");
+  
+  //select all product element
+  let productEle = document.querySelectorAll(".pro");
+  
+  //Add eventListener to all products
+  for (let x = 0; x<productEle.length; x++){
+    productEle[x].addEventListener("click", function(e){
+      populatePopup(e.currentTarget.id)
+    })
+  }
+  
+  //get details of the clicked product
+  function populatePopup(id){
+  
+    let targetProduct = products.find((pro) =>pro.id=== parseInt(id));
+  
+    let productPopupDetail = `
+                          <img src=${targetProduct.image} alt="">
+                          <div class="details">
+                                <button id="btn">close</button>
+                                <h4>${targetProduct.title}</h4>
+                                <h6>${targetProduct.category}</h6>
+                                <p>${targetProduct.description}</p>
+                                <span>Price: $${targetProduct.price}</span>
+                          </div>`
+                    
+  //Show the clicked product
+  productPopUp.innerHTML = productPopupDetail;
+  preventClick.classList.remove("inactive");
+  
+  //Close the popup
+  let closeBtn = document.getElementById("btn");
+  
+  closeBtn.addEventListener("click", function(){
+    preventClick.classList.add("inactive");
+  })
+  }
 
 
 
