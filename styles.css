@@ -62,7 +62,9 @@ body{
     background-color: #E4E6F4;
     box-shadow: 0 5px 15px lightblue;
     height: 50px;
-    
+    position: sticky;
+    top: 0;
+    left: 0;
     width: 100%;
 }
 
@@ -74,9 +76,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
-    left: 0;
+    
 }
 
 .nav-container img{
@@ -124,6 +124,44 @@ body{
     bottom: -2px;
     left: 4px;
 }
+/*INPUTS*/
+
+
+.inputs{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    background-color: rgba(173, 168, 168, 0.5);
+    position: sticky;
+    border-radius: 20px;
+  }
+  
+  
+  
+  
+  input{
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-right: 10px;
+   width: 400px;
+  }
+  
+  .filter{
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    margin-left: 10px;
+ 
+  }
+
+  .categori{
+    font-size: 14px;
+  }
+  
 
 .container{
     max-width: 1240px;
@@ -307,6 +345,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
+    background-color: rgba(173, 168, 168, 0.5);
   }
 
   /*****POPUP*/
@@ -316,7 +355,7 @@ body{
     box-shadow: 1px 1px 2px 1px #a09e9e;
     border-radius: 5px;
     padding: 15px;
-    max-width: 600px;
+    max-width: 700px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -352,9 +391,18 @@ body{
   
   #btn {
     border-radius: 5px;
-    border: 2;
-    width: 40%;
+    border: 0;
+    width: 50px;
     font-size: 14px;
+    align-self: flex-end;
+    margin-right: 20px;
+
+  }
+
+  #btn .fa-solid {
+    cursor: pointer;
+    font-size: 30px;
+    color: #ec544e;
   }
   
   .btn:hover {
@@ -497,7 +545,7 @@ body{
 
 
  .banner-box-three{
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1v8lREBPaXHoBNGEOZ3usqWcbdxwOMTTyGtQ1jFjqnuDoVvzeGquTx60JnWP-tYdV7Fw&usqp=CAU");
+    background-image: url("https://cdn.shopify.com/s/files/1/0070/7032/files/how_20to_20start_20a_20clothing_20brand.png?v=1693935729");
     min-width: 30%;
     height: 23vh;
     display: flex;
@@ -506,12 +554,13 @@ body{
     justify-content: center;
    padding-left: 20px;
     border-radius: 5px;
-    background-repeat: repeat-x;
+    background-repeat: no-repeat;
     margin-bottom: 20px;
+    background-size: cover;
 }
 
 .banner-box-three h2{
-    color: #fff;
+    color: #088178;
     font-weight: 900;
     font-size: 24px
 }

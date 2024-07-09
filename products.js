@@ -368,11 +368,12 @@ productcontainerEle.append(...productEleli)
     let productPopupDetail = `
                           <img src=${targetProduct.image} alt="">
                           <div class="details">
-                                <button id="btn">close</button>
+                                <button id="btn"><i class="fa-solid fa-xmark"></i></button>
                                 <h4>${targetProduct.title}</h4>
                                 <h6>${targetProduct.category}</h6>
                                 <p>${targetProduct.description}</p>
                                 <span>Price: $${targetProduct.price}</span>
+                                <button onclick="addToCart()" class="btn">Add To Cart</button>
                           </div>`
                     
   //Show the clicked product
@@ -387,7 +388,10 @@ productcontainerEle.append(...productEleli)
   })
   }
 
-
+  //Alert when the product is added to cart
+  function addToCart(){
+    alert("Product added successfully!");
+  }
 
 
 
