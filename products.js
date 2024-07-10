@@ -390,8 +390,17 @@ productcontainerEle.append(...productEleli)
 
   //Alert when the product is added to cart
   function addToCart(){
-    alert("Product added successfully!");
-  }
+    /*alert("Product added successfully!");*/
+    let selectedQuantity = document.querySelector(".cart-display h4");
+
+    let numberDisplay =[];
+
+    
+      selectedQuantity.innerText = 1;
+      numberDisplay.push((selectedQuantity) +1);
+      console.log(selectedQuantity);
+    }
+  
 
 
 
