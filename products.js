@@ -366,15 +366,21 @@ productcontainerEle.append(...productEleli)
     let targetProduct = products.find((pro) =>pro.id=== parseInt(id));
   
     let productPopupDetail = `
-                          <img src=${targetProduct.image} alt="">
-                          <div class="details">
-                                <button id="btn"><i class="fa-solid fa-xmark"></i></button>
-                                <h4>${targetProduct.title}</h4>
-                                <h6>${targetProduct.category}</h6>
-                                <p>${targetProduct.description}</p>
-                                <span>Price: $${targetProduct.price}</span>
-                                <button onclick="addToCart()" class="btn">Add To Cart</button>
-                          </div>`
+            <img src=${targetProduct.image} alt="">
+            <div class="details">
+            <button id="btn"><i class="fa-solid fa-xmark"></i></button>
+            <h4>${targetProduct.title}</h4>
+            <h6>${targetProduct.category}</h6>
+            <p>${targetProduct.description}</p>
+            <span>Price: $${targetProduct.price}</span>
+            <button onclick="addToCart()" id="
+            disappear" class="btn">Add To Cart</button>
+            <div class="increament">
+            <button onclick="decreament()"><i class="fa-solid fa-minus"></i></button>
+            <button id="itemQuantity">1</button>
+            <button onclick="increament()"><i class="fa-solid fa-plus"></i></button>
+          </div>
+          </div>`
                     
   //Show the clicked product
   productPopUp.innerHTML = productPopupDetail;
@@ -386,28 +392,49 @@ productcontainerEle.append(...productEleli)
   closeBtn.addEventListener("click", function(){
     preventClick.classList.add("inactive");
   })
+
+  
   }
 
-  //Alert when the product is added to cart
+   //make the AddToCart button dessapear after getting clicked
+   let btnDisappear= document.getElementsByClassName("btn");
+
+
+  //Add 1 to the cart when add to cart is clicked
+  let count = 0;
+  let toCart=document.getElementById("quantityDisplay");
+
   function addToCart(){
-    /*alert("Product added successfully!");*/
-    let selectedQuantity = document.querySelector(".cart-display h4");
+    count++;
+    toCart.innerText = count;
+    btnDisappear.classList.add("remove")
+  }
 
-    let numberDisplay =[];
+ 
+//Increament by one each time the + button is clicked
 
-    
-      selectedQuantity.innerText = 1;
-      numberDisplay.push((selectedQuantity) +1);
-      console.log(selectedQuantity);
-    }
+let quantityDisplay = document.getElementById("quantityDisplay");
+let number = document.getElementById("itemQuantity");
+
+function increament(){
+  count++;
+  quantityDisplay.innerText = count;
+  number.innerText = count;
+
   
+  console.log(number)
+}
+
+//Decreasing the number by one each time 
 
 
 
-
-
-
-
+function decreament(){
+  count--;
+  quantityDisplay.innerText = count;
+  number.innerText = count;
+  console.log(number)
+}
 
 
 
