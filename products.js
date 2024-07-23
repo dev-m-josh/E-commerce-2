@@ -246,8 +246,38 @@ const products = [
 
 var productcontainerEle = document.getElementById("pro-container");
 
-let productEleli = [];
 
+let containerProducts = document.getElementById("pro-container")
+
+fetch  ('https://fakestoreapi.com/products')
+.then(res=>{
+  return res.json()})
+  .then(data=>{
+    let productEleli=data.map(product =>  `<div id="${product.id}" class="pro">
+        <img src="${product.image}" alt="">
+        <div class="description">
+            <div class="cart">
+                <h4>$ ${product.price}</h4>
+                <div class="yello">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                </div>
+                </div>
+                <span class="category">${product.category}</span>
+                <h5>${product.title}</h5>
+                <button>Add To Cart</button>
+            
+        </div>
+    </div>`              
+    );
+    containerProducts.innerHTML=productEleli
+
+  })
+  .catch(err => console.log(err));
+/*
 function creatproduct (product){
   //A product div
   let productEle = document.createElement("div");
@@ -337,7 +367,7 @@ for (var x = 0; x<products.length; x++){
 
 //append the created products html elements to the DOM
 productcontainerEle.append(...productEleli)
-
+*/
 
 
 

@@ -1,4 +1,5 @@
 
+
 *{
     padding: 0;
     font-family: cursive;
@@ -298,9 +299,9 @@ body{
     width: 100%;
 }
 
-.pro-container{
+#pro-container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     overflow-wrap: normal;
     gap: 20px;
     width: 100%;
@@ -317,11 +318,14 @@ body{
     border-radius: 20px;
     cursor: pointer;
     transition: ease-in-out .2s;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .pro img{
     width: 100%;
-    height: 55%;
+    height: 50%;
     object-fit: contain;
     border-radius: 10px;
 }
@@ -350,6 +354,7 @@ body{
 
 
 .cart{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -618,99 +623,58 @@ body{
 
 
 /*shorpping-cart*/
-#cart-container{
+.cart-div{
+    background-color: #fae3e3;
     width: 100%;
-    margin-top: 20px;
     display: flex;
-    justify-content: center;
-    border: 1px solid black;
-}
-
-#cart-container td{
-    width: 16.6%;
-    font-size: 16px;
     align-items: center;
-    text-align: center;
-    border: 1px solid gray;
-}
-
-thead td{
-    font-size: 16px;
-    font-weight: 600;
-    background-color: #ec544e;
-    color: black;
-    padding: 4px;
-
-}
-
-
-tbody{
-    width: 100%;
-
-}
-
-
-tbody a{
-    font-size: 40px;
-    color: blue;
-
-}
-
-tbody img{
-    width: 100px;
-}
-
-tbody input{
-    width: 45%;
-    border-radius: 3px;
-    font-size: 16px;
-    font-weight: 600;
-
-}
-
-
-/*CART SUMMARY*/
-.cart-total{
-    width: 400px;
     margin-top: 40px;
-    background-color: lightgray ;
-    border: 1px solid gray;
+    border-radius: 4px;
 }
 
-.cart-total h4{
-background-color: #ec544e;
-font-weight: 500;
-color: white;
-padding-left: 8px;
-
+.cart-div a{
+    font-size: 30px;
+    color: blue;
+    margin: 0 40px;
 }
 
-.totals{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 10px;
-    border: 1px solid gray;
-    width: 100%;
-}
-
-.totals h5, h3{
-    font-size: 18px;
+.cart-div img{
+    width: 150px;
     margin: 5px;
-    width: 100%
-    
-    
+    border-radius: 4px;
 }
 
-.totals h3{
-   margin-left: 5px;
-    width: 100%;
-    border-left: 1px solid gray;
+.cart-div h5{
+    font-size: 14px;
+    margin-left: 30px;
+    text-align: center;
+    width: 200px;
+}
+.cart-div p{
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 30px;
 }
 
+.cart-div input{
+    width: 100px;
+    font-size: 18px;
+    border-radius: 4px;
+    margin-left: 30px;
+    border-color: gray;
+}
 
+.cart-div .cost{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-
+.cost p{
+    margin: 0 10px;
+}
 
 
 
